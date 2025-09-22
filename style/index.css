@@ -1,0 +1,95 @@
+/* Стили для главной страницы */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--white);
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.author-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.author-photo {
+    flex: 0 0 200px;
+}
+
+.author-photo img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    height: auto;
+}
+
+.author-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.author-details h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.skill {
+    background-color: #ecf0f1;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+    font-weight: 500;
+}
+
+.experience {
+    margin-top: 2rem;
+}
+
+.experience-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid #3498db;
+    transition: var(--transition);
+}
+
+.experience-item:hover {
+    transform: translateX(5px);
+}
+
+.experience-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .author-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .author-photo {
+        margin: 0 auto;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
