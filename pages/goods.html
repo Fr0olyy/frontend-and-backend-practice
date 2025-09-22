@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары | Семестровая работа</title>
+    <title>Товары | Хазиков Борис - Fullstack Developer</title>
     <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/goods.css">
 </head>
 <body>
-    <header>
+    <!-- Hero Section -->
+    <header class="hero-header">
         <div class="container">
-            <h1>Каталог товаров</h1>
+            <div class="hero-content fade-in">
+                <h1>Каталог Товаров</h1>
+                <p class="subtitle">Лучшие технологические решения для вашего бизнеса</p>
+            </div>
         </div>
     </header>
-    
+
+    <!-- Navigation -->
     <nav class="main-nav">
         <div class="container nav-container">
-            <a href="index.html" class="logo">Борис Хазиков</a>
+            <a href="../index.html" class="logo">Иван Иванов</a>
             <ul class="nav-menu">
-                <li><a href="../index.html" >Главная</a></li>
+                <li><a href="../index.html">Главная</a></li>
                 <li><a href="news.html">Новости</a></li>
                 <li><a href="practices.html">Практики</a></li>
                 <li><a href="goods.html" class="active">Товары</a></li>
@@ -25,68 +31,116 @@
             </ul>
         </div>
     </nav>
-    
-    <main class="container">
-        <div class="products-header">
-            <h2>Наши товары</h2>
-            <p>Широкий ассортимент качественной продукции</p>
-        </div>
-        
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="../images/product1.jpg" alt="Ноутбук" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Ноутбук игровой</h3>
-                    <p class="product-price">75 000 руб.</p>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <section class="section fade-in">
+                <div class="section-header">
+                    <h2>Наши продукты</h2>
+                    <p class="section-subtitle">Высококачественные решения для ваших задач</p>
                 </div>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/product2.jpg" alt="Смартфон" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Смартфон премиум</h3>
-                    <p class="product-price">45 000 руб.</p>
+
+                <div class="filters">
+                    <button class="filter-btn active">Все товары</button>
+                    <button class="filter-btn">Программное обеспечение</button>
+                    <button class="filter-btn">Консультации</button>
+                    <button class="filter-btn">Веб-разработка</button>
                 </div>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/product3.jpg" alt="Наушники" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Беспроводные наушники</h3>
-                    <p class="product-price">12 000 руб.</p>
+
+                <div class="products-grid">
+                    <!-- Товар 1 -->
+                    <div class="card product-card">
+                        <img src="../images/photo1.jpg" alt="Веб-приложение" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Корпоративное веб-приложение</h3>
+                            <p class="product-description">Полнофункциональное веб-приложение для автоматизации бизнес-процессов с современным UI/UX дизайном.</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★ 4.9</span>
+                                <span>25 продаж</span>
+                            </div>
+                            <div class="product-price">75 000 ₽</div>
+                            <div class="product-actions">
+                                <button class="btn btn-small">В корзину</button>
+                                <button class="btn btn-small btn-outline">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 2 -->
+                    <div class="card product-card">
+                        <img src="../images/photo2.jpg" alt="Мобильное приложение" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Мобильное приложение</h3>
+                            <p class="product-description">Кроссплатформенное мобильное приложение с нативным пользовательским опытом и высокой производительностью.</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★ 4.8</span>
+                                <span>18 продаж</span>
+                            </div>
+                            <div class="product-price">45 000 ₽</div>
+                            <div class="product-actions">
+                                <button class="btn btn-small">В корзину</button>
+                                <button class="btn btn-small btn-outline">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 3 -->
+                    <div class="card product-card">
+                        <img src="../images/photo3.jpg" alt="Техническая консультация" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Техническая консультация</h3>
+                            <p class="product-description">Профессиональная консультация по архитектуре приложений, выбору технологий и оптимизации производительности.</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★ 5.0</span>
+                                <span>32 продажи</span>
+                            </div>
+                            <div class="product-price">12 000 ₽</div>
+                            <div class="product-actions">
+                                <button class="btn btn-small">В корзину</button>
+                                <button class="btn btn-small btn-outline">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/product4.jpg" alt="Планшет" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Планшет графический</h3>
-                    <p class="product-price">32 000 руб.</p>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/product5.jpg" alt="Монитор" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Монитор 27"</h3>
-                    <p class="product-price">25 000 руб.</p>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/product6.jpg" alt="Клавиатура" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Механическая клавиатура</h3>
-                    <p class="product-price">8 500 руб.</p>
-                </div>
-            </div>
+            </section>
         </div>
     </main>
-    
-    <footer>
+
+    <!-- Footer -->
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2023 Семестровая работа Иванова Ивана Ивановича</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul class="footer-links">
+                        <li>📧 hazikov2006@mail.ru</li>
+                        <li>📱 +7 (900) 227-67-90</li>
+                        <li>📍 Москва, Россия</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Соцсети</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">VK</a></li>
+                        <li><a href="#">Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Хазиков Борис Антонович. Все права защищены.</p>
+            </div>
         </div>
     </footer>
+    <script src="../scripts/goods.js"></script>
 </body>
 </html>
