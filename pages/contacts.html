@@ -50,6 +50,10 @@
                             <button class="btn" onclick="window.location.href='tel:+79991234567'" style="margin-top: 1rem; width: 40%;">
                                 📞 Позвонить мне
                             </button>
+                            <!-- Добавленная кнопка для открытия диалога -->
+                            <button class="btn btn-dialog" onclick="openContactDialog()" style="margin-top: 1rem; width: 40%; background: var(--gradient-primary);">
+                                💬 Быстрый контакт
+                            </button>
                         </div>
 
                         <div class="contact-item">
@@ -62,6 +66,68 @@
             </section>
          </div>
     </main>
+
+    <!-- Диалоговое окно -->
+    <dialog id="contactDialog" class="contact-dialog">
+        <div class="dialog-header">
+            <h2>💬 Быстрый контакт</h2>
+            <button class="dialog-close" onclick="closeContactDialog()">×</button>
+        </div>
+        
+        <div class="dialog-content">
+            <p class="dialog-subtitle">Выберите удобный способ связи:</p>
+            
+            <div class="contact-options">
+                <button class="contact-option" onclick="contactViaWhatsApp()">
+                    <span class="option-icon">📱</span>
+                    <span class="option-text">
+                        <strong>WhatsApp</strong>
+                        <small>Мгновенные сообщения</small>
+                    </span>
+                </button>
+                
+                <button class="contact-option" onclick="contactViaTelegram()">
+                    <span class="option-icon">✈️</span>
+                    <span class="option-text">
+                        <strong>Telegram</strong>
+                        <small>Быстрый обмен сообщениями</small>
+                    </span>
+                </button>
+                
+                <button class="contact-option" onclick="contactViaEmail()">
+                    <span class="option-icon">📧</span>
+                    <span class="option-text">
+                        <strong>Email</strong>
+                        <small>Для официальных запросов</small>
+                    </span>
+                </button>
+                
+                <button class="contact-option" onclick="scheduleCall()">
+                    <span class="option-icon">📅</span>
+                    <span class="option-text">
+                        <strong>Запланировать звонок</strong>
+                        <small>Выберите удобное время</small>
+                    </span>
+                </button>
+            </div>
+            
+            <div class="dialog-divider">
+                <span>или</span>
+            </div>
+            
+            <div class="quick-message">
+                <h3>Отправить быстое сообщение:</h3>
+                <textarea id="quickMessage" placeholder="Напишите ваше сообщение здесь..." rows="4"></textarea>
+                <button class="btn send-message-btn" onclick="sendQuickMessage()">
+                    📤 Отправить сообщение
+                </button>
+            </div>
+        </div>
+        
+        <div class="dialog-footer">
+            <p>Обычно отвечаю в течение 1-2 часов</p>
+        </div>
+    </dialog>
     
    <footer class="main-footer">
         <div class="container">
@@ -96,5 +162,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../scripts/contacts.js"> </script>
 </body>
 </html>
